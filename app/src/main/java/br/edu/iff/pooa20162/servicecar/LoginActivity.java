@@ -3,6 +3,7 @@ package br.edu.iff.pooa20162.servicecar;
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -92,6 +93,36 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
 
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
+
+        final EditText email=(EditText) findViewById(R.id.email);
+        final EditText password=(EditText) findViewById(R.id.password);
+        Button email_sign_in_button = (Button) findViewById(R.id.email_sign_in_button);
+        email_sign_in_button.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view){
+                Intent intent = new Intent(LoginActivity.this,PrincipalActivity.class);
+                intent.putExtra("email",email.getText().toString());
+                intent.putExtra("senha",password.getText().toString());
+                startActivity(intent);
+            }
+        });
+        Button esqueci_minha_senha = (Button) findViewById(R.id.esqueci_minha_senha);
+        esqueci_minha_senha.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view){
+                Intent intent = new Intent(LoginActivity.this,EsqueciActivity.class);
+                startActivity(intent);
+            }
+        });
+        Button cadastra_se = (Button) findViewById(R.id.cadastra_se);
+        cadastra_se.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View view){
+            Intent intent = new Intent(LoginActivity.this,CadastroActivity.class);
+            startActivity(intent);
+            }
+        });
+
     }
 
     private void populateAutoComplete() {
