@@ -1,13 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/cadastro"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
     tools:context="br.edu.iff.pooa20162.servicecar.CadastroActivity">
 
     <TextView
@@ -18,15 +15,15 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <TextView
         android:text="Nome:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView8"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="28dp"
-        android:id="@+id/textView9"
+        android:id="@+id/idNome"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <EditText
@@ -34,18 +31,37 @@
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
         android:ems="10"
-        android:id="@+id/editText13"
-        android:layout_alignBottom="@+id/textView9"
-        android:layout_alignStart="@+id/textView8" />
+        android:id="@+id/editText13"/>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:text="CPF:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idCpf"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/editText20"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <TextView
         android:text="E-mail:"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:id="@+id/textView10"
-        android:layout_below="@+id/textView9"
-        android:layout_alignParentStart="true"
+        android:id="@+id/idEmail"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
     <EditText
@@ -53,95 +69,115 @@
         android:layout_height="wrap_content"
         android:inputType="textEmailAddress"
         android:ems="10"
-        android:id="@+id/editText14"
-        android:layout_alignBottom="@+id/textView10"
-        android:layout_alignStart="@+id/editText13" />
+        android:id="@+id/editText14" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Data de Nascimento:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idDataNasc"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="date"
         android:ems="10"
-        android:layout_below="@+id/editText14"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="14dp"
-        android:id="@+id/editText15" />
+        android:id="@+id/editText15"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Telefone:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idTelefone"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="phone"
         android:ems="10"
-        android:id="@+id/editText16"
-        android:layout_alignBaseline="@+id/textView12"
-        android:layout_alignBottom="@+id/textView12"
-        android:layout_toEndOf="@+id/textView12"
-        android:layout_marginStart="31dp" />
+        android:id="@+id/editText16"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:text="Senha:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idSenha"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPassword"
         android:ems="10"
-        android:id="@+id/editText17"
-        android:layout_alignBaseline="@+id/textView13"
-        android:layout_alignBottom="@+id/textView13"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/editText17"/>
 
-    <TextView
-        android:text="Data de Nascimento:"
+     </LinearLayout>
+
+
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView11"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_alignBaseline="@+id/editText15"
-        android:layout_alignBottom="@+id/editText15"
-        android:layout_toStartOf="@+id/editText15"
-        android:layout_marginEnd="25dp" />
+        android:orientation="horizontal">
 
+        <TextView
+            android:text="Sexo:"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idSexo"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:text="Feminino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idFeminino"/>
+
+        <RadioButton
+            android:text="Masculino"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idMasculino"/>
+    </RadioGroup>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
     <Button
         android:text="OK"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/button2"
-        android:layout_alignParentBottom="true"
-        android:layout_toEndOf="@+id/radioButton3" />
+        android:id="@+id/idOk"/>
+    </LinearLayout>
 
-    <RadioButton
-        android:text="Feminino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButton4"
-        android:layout_above="@+id/button2"
-        android:layout_toEndOf="@+id/textView13"
-        android:layout_marginBottom="15dp" />
 
-    <RadioButton
-        android:text="Masculino"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/radioButton3"
-        android:layout_alignBottom="@+id/radioButton4"
-        android:layout_alignStart="@+id/radioButton4"
-        android:layout_marginBottom="32dp" />
 
-    <TextView
-        android:text="Senha:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView13"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_above="@+id/radioButton3"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="34dp" />
 
-    <TextView
-        android:text="Telefone:"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView12"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_centerVertical="true"
-        android:layout_alignParentStart="true" />
 
-</RelativeLayout>
+</LinearLayout>
