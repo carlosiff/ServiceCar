@@ -12,35 +12,35 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/dispo"
-        android:id="@+id/imageButton"
+        android:id="@+id/imageDispo"
         android:visibility="visible" />
 
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/orcamento"
-        android:id="@+id/imageButton2"
+        android:id="@+id/imageOrca"
         android:visibility="visible" />
 
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/avaliacao"
-        android:id="@+id/imageButton3"
+        android:id="@+id/imageAvali"
         android:visibility="visible" />
 
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/indicar"
-        android:id="@+id/imageButton4"
+        android:id="@+id/imageRecomendar"
         android:visibility="visible" />
 
     <ImageButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/sair"
-        android:id="@+id/imageButton5"
+        android:id="@+id/imageSair"
         android:visibility="visible" />
 
 </LinearLayout>

@@ -13,5 +13,19 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="title_activity_menu">Tela de Menu</string>
+    <string name="title_activity_menu">Tela de Menu</string>]
+
+    <string-array name="servicos">
+        <item></item>
+        <item>Troca de Óleo e Lubrificantes</item>
+        <item>Alinhamento e Balanceamento</item>
+        <item>Regulagem de Motores</item>
+        <item>Sistemas de Freios</item>
+        <item>Mecânica Geral</item>
+        <item> Suspensão</item>
+        <item>Ar-condicionado</item>
+        <item>Escapamento</item>
+        <item>Direção Hidráulica</item>
+        <item>Sistemas de Injeção</item>
+    </string-array>
 </resources>
