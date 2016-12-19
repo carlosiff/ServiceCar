@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@color/verde"
     tools:context="br.edu.iff.pooa20162.servicecar.PrincipalActivity">
 
     <ImageButton
@@ -34,6 +35,7 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/indicar"
         android:id="@+id/imageRecomendar"
+        android:onClick="link"
         android:visibility="visible" />
 
     <ImageButton

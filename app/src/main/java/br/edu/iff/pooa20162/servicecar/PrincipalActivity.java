@@ -1,6 +1,7 @@
 package br.edu.iff.pooa20162.servicecar;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -49,4 +50,14 @@ public class PrincipalActivity extends AppCompatActivity {
             }
         });
     }
+    public void link(View view){
+        Intent linkIntent=new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.facebook.com/ServiceCar2016"));
+        startActivity(linkIntent);
+
+    }
+
 }
+
+
+
+
