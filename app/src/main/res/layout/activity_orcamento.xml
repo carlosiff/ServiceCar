@@ -11,23 +11,6 @@
     android:background="@color/verde"
     tools:context="br.edu.iff.pooa20162.servicecar.OrcamentoActivity">
 
-    <Button
-        android:text="OK"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/idEscolha" />
-
-    <Spinner
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/spinner"
-        android:layout_marginTop="60dp"
-        android:layout_below="@+id/textView"
-        android:entries="@array/servicos"
-        android:layout_alignParentStart="true" />
-
     <TextView
         android:text="Escolha o serviço:"
         android:layout_width="wrap_content"
@@ -38,4 +21,11 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentStart="true"
         android:layout_marginTop="21dp" />
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/lservicos"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/textView" />
 </RelativeLayout>
