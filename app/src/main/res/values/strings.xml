@@ -13,7 +13,8 @@
     <string name="permission_rationale">"Contacts permissions are needed for providing email
         completions."
     </string>
-    <string name="title_activity_menu">Tela de Menu</string>]
+    <string name="title_activity_menu">Tela de Menu</string>
+    <string name="action_settings">Configurações</string>
 
     <string-array name="servicos">
         <item>Troca de Óleo e Lubrificantes</item>
@@ -27,4 +28,6 @@
         <item>Direção Hidráulica</item>
         <item>Sistemas de Injeção</item>
     </string-array>
+    <string name="title_activity_lvavalaicao">LVAvalaicaoActivity</string>
+    <string name="title_activity_lvcadastro">LVCadastroActivity</string>
 </resources>

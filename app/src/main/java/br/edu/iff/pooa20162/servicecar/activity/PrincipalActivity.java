@@ -1,12 +1,13 @@
-package br.edu.iff.pooa20162.servicecar;
+package br.edu.iff.pooa20162.servicecar.activity;
 
 import android.content.Intent;
 import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
+
+import br.edu.iff.pooa20162.servicecar.R;
 
 public class PrincipalActivity extends AppCompatActivity {
 
@@ -36,7 +37,7 @@ public class PrincipalActivity extends AppCompatActivity {
         imageAvali.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view){
-                Intent intent = new Intent(PrincipalActivity.this,AvaliacaoActivity.class);
+                Intent intent = new Intent(PrincipalActivity.this,LVAvalaicaoActivity.class);
                 startActivity(intent);
             }
         });

@@ -6,16 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/verde"
-    tools:context="br.edu.iff.pooa20162.servicecar.CadastroActivity">
+    tools:context="br.edu.iff.pooa20162.servicecar.activity.CadastroActivity">
 
     <TextView
-        android:text="Dados Pessoais"
+        android:id="@+id/dadosPessoais"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/textView8"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:text="Dados Pessoais"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -27,12 +27,12 @@
         android:id="@+id/idNome"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPersonName"
-        android:ems="10"
-        android:id="@+id/editText13"/>
+        <EditText
+            android:id="@+id/salvaNome"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPersonName" />
     </LinearLayout>
 
     <LinearLayout
@@ -47,11 +47,11 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <EditText
+            android:id="@+id/salvaCpf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/editText20"/>
+            android:inputType="textPersonName" />
     </LinearLayout>
 
     <LinearLayout
@@ -65,12 +65,12 @@
         android:id="@+id/idEmail"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textEmailAddress"
-        android:ems="10"
-        android:id="@+id/editText14" />
+        <EditText
+            android:id="@+id/salvaEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
     </LinearLayout>
 
     <LinearLayout
@@ -85,12 +85,12 @@
             android:id="@+id/idDataNasc"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="date"
-        android:ems="10"
-        android:id="@+id/editText15"/>
+        <EditText
+            android:id="@+id/salvaNascimento"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="date" />
 
     </LinearLayout>
 
@@ -106,12 +106,12 @@
             android:id="@+id/idTelefone"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="phone"
-        android:ems="10"
-        android:id="@+id/editText16"/>
+        <EditText
+            android:id="@+id/salvaTelefone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="phone" />
 
     </LinearLayout>
 
@@ -127,12 +127,12 @@
             android:id="@+id/idSenha"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
 
-    <EditText
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
-        android:ems="10"
-        android:id="@+id/editText17"/>
+        <EditText
+            android:id="@+id/salvaSenha"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textPassword" />
 
      </LinearLayout>
 
@@ -148,11 +148,11 @@
             android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
 
         <EditText
+            android:id="@+id/salvaDica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:inputType="text"
             android:ems="10"
-            android:id="@+id/editText40"/>
+            android:inputType="text" />
     </LinearLayout>
 
     <LinearLayout
@@ -166,22 +166,12 @@
             android:layout_height="wrap_content"
             android:id="@+id/idSexo"
             android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <RadioButton
-            android:text="Feminino"
+        <EditText
+            android:id="@+id/salvaSexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/idFeminino"/>
-
-        <RadioButton
-            android:text="Masculino"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/idMasculino"/>
-    </RadioGroup>
+            android:ems="10"
+            android:inputType="textPersonName" />
     </LinearLayout>
 
     <LinearLayout

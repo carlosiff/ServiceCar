@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/verde"
-    tools:context="br.edu.iff.pooa20162.servicecar.PrincipalActivity">
+    tools:context="br.edu.iff.pooa20162.servicecar.activity.PrincipalActivity">
 
     <ImageButton
         android:layout_width="match_parent"

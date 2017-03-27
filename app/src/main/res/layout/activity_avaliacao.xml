@@ -9,25 +9,18 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:background="@color/verde"
-    tools:context="br.edu.iff.pooa20162.servicecar.AvaliacaoActivity">
-
-    <RatingBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:id="@+id/idEstrelas"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+    tools:context="br.edu.iff.pooa20162.servicecar.activity.AvaliacaoActivity">
 
     <TextView
-        android:text="Faça a sua avaliação:"
+        android:text="Faça a sua avaliação  (De 1 a 5):"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/idAvaliacaoCliente"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="25dp" />
+        android:layout_marginTop="25dp"
+        tools:ignore="HardcodedText" />
 
     <TextView
         android:text="Deixe seu comentário:"
@@ -35,17 +28,29 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:layout_marginTop="46dp"
-        android:layout_below="@+id/idEstrelas"
-        android:layout_alignStart="@+id/idAvaliacaoCliente" />
+        tools:ignore="HardcodedText"
+        android:layout_above="@+id/idComentarios"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="37dp" />
 
     <Button
         android:text="Salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/idSalvarAvaliacao"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:id="@+id/idSalvarAvaliacao" />
+        android:layout_toEndOf="@+id/idAlterarAvaliacao"
+        android:layout_marginStart="24dp"
+        tools:ignore="HardcodedText" />
+
+    <Button
+        android:text="Alterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/idAlterarAvaliacao"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/textView2"
+        tools:ignore="HardcodedText" />
 
     <EditText
         android:layout_width="wrap_content"
@@ -53,7 +58,17 @@
         android:inputType="textMultiLine"
         android:ems="10"
         android:id="@+id/idComentarios"
-        android:layout_below="@+id/textView2"
-        android:layout_alignEnd="@+id/idSalvarAvaliacao"
-        android:layout_marginTop="25dp" />
+        android:layout_marginBottom="70dp"
+        android:layout_above="@+id/idSalvarAvaliacao"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:id="@+id/idAvaliacao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:layout_below="@+id/idAvaliacaoCliente"
+        android:layout_alignStart="@+id/idComentarios"
+        android:layout_marginTop="31dp" />
 </RelativeLayout>

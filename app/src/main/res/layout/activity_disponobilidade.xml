@@ -4,7 +4,7 @@
     android:id="@+id/activity_disponobilidade"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="br.edu.iff.pooa20162.servicecar.DisponobilidadeActivity"
+    tools:context="br.edu.iff.pooa20162.servicecar.activity.DisponobilidadeActivity"
     android:gravity="center"
     android:background="@color/verde"
     android:orientation="vertical">

@@ -5,7 +5,7 @@
     android:background="@drawable/bg"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    tools:context="br.edu.iff.pooa20162.servicecar.LoginActivity">
+    tools:context="br.edu.iff.pooa20162.servicecar.activity.LoginActivity">
 
     <!-- Login progress -->
     <ScrollView
@@ -30,7 +30,8 @@
                     android:hint="Email:"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    tools:ignore="Deprecated,HardcodedText" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -48,7 +49,8 @@
                     android:imeOptions="actionUnspecified"
                     android:inputType="textPassword"
                     android:maxLines="1"
-                    android:singleLine="true" />
+                    android:singleLine="true"
+                    tools:ignore="Deprecated,HardcodedText" />
 
                 <Button
                     android:id="@+id/email_sign_in_button"
@@ -59,7 +61,8 @@
                     android:text="Entrar"
                     android:textStyle="bold"
                     android:layout_weight="1"
-                    android:visibility="visible" />
+                    android:visibility="visible"
+                    tools:ignore="HardcodedText" />
 
             </android.support.design.widget.TextInputLayout>
 
@@ -68,14 +71,16 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/esqueci_minha_senha"
-                android:visibility="visible" />
+                android:visibility="visible"
+                tools:ignore="HardcodedText" />
 
             <Button
                 android:text="Cadastre-se"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/cadastra_se"
-                android:visibility="visible" />
+                android:visibility="visible"
+                tools:ignore="HardcodedText" />
 
         </LinearLayout>
     </ScrollView>
