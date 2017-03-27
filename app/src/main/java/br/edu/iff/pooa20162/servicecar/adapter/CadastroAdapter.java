@@ -10,7 +10,6 @@ import android.widget.TextView;
 import java.util.ArrayList;
 
 import br.edu.iff.pooa20162.servicecar.R;
-import br.edu.iff.pooa20162.servicecar.model.Avaliacao;
 import br.edu.iff.pooa20162.servicecar.model.Cadastro;
 
 /**

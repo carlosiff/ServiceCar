@@ -12,14 +12,14 @@
     tools:context="br.edu.iff.pooa20162.servicecar.activity.AvaliacaoActivity">
 
     <TextView
-        android:text="Faça a sua avaliação  (De 1 a 5):"
+        android:id="@+id/idAvaliacaoCliente"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/idAvaliacaoCliente"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="25dp"
+        android:text="Faça a sua avaliação"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         tools:ignore="HardcodedText" />
 
     <TextView
@@ -60,15 +60,28 @@
         android:id="@+id/idComentarios"
         android:layout_marginBottom="70dp"
         android:layout_above="@+id/idSalvarAvaliacao"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        tools:ignore="LabelFor" />
 
     <EditText
         android:id="@+id/idAvaliacao"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="38dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:layout_below="@+id/idAvaliacaoCliente"
+        android:layout_above="@+id/textView2"
         android:layout_alignStart="@+id/idComentarios"
-        android:layout_marginTop="31dp" />
+        tools:ignore="LabelFor" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Nota de 1 a 5):"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginBottom="34dp"
+        android:layout_above="@+id/idAvaliacao"
+        android:layout_alignParentStart="true"
+        tools:ignore="HardcodedText" />
 </RelativeLayout>

@@ -16,10 +16,10 @@
         android:theme="@style/AppTheme">
         <meta-data
             android:name="DATABASE"
-            android:value="servicecar.db" />
+            android:value="servicecar2.db" />
         <meta-data
             android:name="VERSION"
-            android:value="3" />
+            android:value="5" />
         <meta-data
             android:name="QUERY_LOG"
             android:value="false" />
@@ -50,6 +50,9 @@
             android:name=".activity.LVCadastroActivity"
             android:label="@string/title_activity_lvcadastro"
             android:theme="@style/AppTheme.NoActionBar"></activity>
+
+
+        <activity android:name=".activity.LVOrcamentoActivity"></activity>
     </application>
 
 </manifest>

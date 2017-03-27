@@ -15,7 +15,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:text="Dados Pessoais"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        tools:ignore="HardcodedText,ObsoleteLayoutParam" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,14 +26,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/idNome"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/salvaNome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            tools:ignore="LabelFor" />
     </LinearLayout>
 
     <LinearLayout
@@ -44,14 +47,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/idCpf"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/salvaCpf"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            tools:ignore="LabelFor" />
     </LinearLayout>
 
     <LinearLayout
@@ -63,14 +68,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/idEmail"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/salvaEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            tools:ignore="LabelFor" />
     </LinearLayout>
 
     <LinearLayout
@@ -83,14 +90,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/idDataNasc"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/salvaNascimento"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="date" />
+            android:inputType="date"
+            tools:ignore="LabelFor" />
 
     </LinearLayout>
 
@@ -104,14 +113,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/idTelefone"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/salvaTelefone"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="phone" />
+            android:inputType="phone"
+            tools:ignore="LabelFor" />
 
     </LinearLayout>
 
@@ -125,14 +136,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/idSenha"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/salvaSenha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            tools:ignore="LabelFor" />
 
      </LinearLayout>
 
@@ -145,14 +158,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/idDica"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:ignore="HardcodedText" />
 
         <EditText
             android:id="@+id/salvaDica"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="text" />
+            android:inputType="text"
+            tools:ignore="LabelFor" />
     </LinearLayout>
 
     <LinearLayout
@@ -165,13 +180,15 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/idSexo"
-            android:textAppearance="@style/TextAppearance.AppCompat.Body2"/>
+            android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+            tools:ignore="HardcodedText" />
         <EditText
             android:id="@+id/salvaSexo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            tools:ignore="LabelFor" />
     </LinearLayout>
 
     <LinearLayout
@@ -182,7 +199,18 @@
         android:text="Salvar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/idSalvarDados"/>
+        android:id="@+id/idSalvarDados"
+        tools:ignore="ButtonStyle,HardcodedText" />
+
+        <Button
+            android:text="Alterar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/idAlterarDados"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+
+
     </LinearLayout>
 
 

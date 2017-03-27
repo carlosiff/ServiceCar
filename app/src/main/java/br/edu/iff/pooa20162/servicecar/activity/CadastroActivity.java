@@ -21,7 +21,7 @@ public class CadastroActivity extends Activity {
 
     EditText nome, cpf, email, dataNasc, telefone, senha, dica, sexo;
     Button btsalvar, btalterar;
-    long id;
+    long id=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,7 +66,7 @@ public class CadastroActivity extends Activity {
 
 
         btsalvar = (Button) findViewById(R.id.idSalvarDados);
-        btalterar = (Button) findViewById(R.id.idAlterarAvaliacao);
+        btalterar = (Button) findViewById(R.id.idAlterarDados);
 
 
         btsalvar.setOnClickListener( new View.OnClickListener(){

@@ -18,6 +18,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="34dp"
+        android:onClick="mostrasenha"
         android:id="@+id/idOk2" />
 
     <TextView

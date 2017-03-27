@@ -29,11 +29,13 @@ import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import br.edu.iff.pooa20162.servicecar.R;
+import br.edu.iff.pooa20162.servicecar.model.Cadastro;
 
 import static android.Manifest.permission.READ_CONTACTS;
 
@@ -41,6 +43,8 @@ import static android.Manifest.permission.READ_CONTACTS;
  * A login screen that offers login via email/password.
  */
 public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<Cursor> {
+    EditText etemail, etpassword;
+
 
     /**
      * Id to identity READ_CONTACTS permission request.
@@ -96,16 +100,35 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         mLoginFormView = findViewById(R.id.login_form);
         mProgressView = findViewById(R.id.login_progress);
 
-        final EditText email=(EditText) findViewById(R.id.email);
-        final EditText password=(EditText) findViewById(R.id.password);
+          etemail=(EditText) findViewById(R.id.email);
+          etpassword=(EditText) findViewById(R.id.password);
         Button email_sign_in_button = (Button) findViewById(R.id.email_sign_in_button);
         email_sign_in_button.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view){
-                Intent intent = new Intent(LoginActivity.this,PrincipalActivity.class);
-                intent.putExtra("email",email.getText().toString());
-                intent.putExtra("senha",password.getText().toString());
-                startActivity(intent);
+
+                String email = etemail.getText().toString();
+                String senha = etpassword.getText().toString();
+                if (email.isEmpty() || senha.isEmpty()){
+                    Toast.makeText(getApplicationContext(), "Informe o email e a senha!", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    List<Cadastro> query = Cadastro.find(Cadastro.class, "email = ?", email);
+                    Boolean login=false;
+                    for (int i=0; i<query.size(); i++){
+                        if (query.get(i).getSenha().equals(senha)){
+                            Intent it = new Intent(LoginActivity.this, PrincipalActivity.class);
+                            it.putExtra("id", query.get(i).getId().toString());
+                            login=true;
+                            startActivity(it);
+                            finish();
+                        }
+                    }
+                    if (!login){
+                        Toast.makeText(getApplicationContext(), "Dados inválidos!", Toast.LENGTH_SHORT).show();
+                    }
+                }
+
             }
         });
         Button esqueci_minha_senha = (Button) findViewById(R.id.esqueci_minha_senha);
@@ -120,7 +143,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderCallbacks<
         cadastra_se.setOnClickListener(new View.OnClickListener()
         {
             public void onClick(View view){
-            Intent intent = new Intent(LoginActivity.this,CadastroActivity.class);
+            Intent intent = new Intent(LoginActivity.this,LVCadastroActivity.class);
             startActivity(intent);
             }
         });
